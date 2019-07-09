@@ -1,0 +1,41 @@
+extends ../pug/layout.pug
+
+block meta
+  title НордВест - О компании
+  meta(name='description', content='')
+
+block header
+  +header(pagesList, 4)
+
+block content
+  section.staff
+    h2.staff__title.section-title Кто работает для Вас?
+    ul.staff__list
+      li.staff__item.staff__item--main
+        img.staff__item-photo.staff__item-photo--main(src='img/grinir.jpg', width='370', height='295', alt='Гриневич Ирина')
+        .staff__item-wrap
+          cite.staff__item-person.staff__item-person--main Гриневич Ирина
+          blockquote.staff__item-blockquote.staff__item-blockquote--main
+            mark.staff__item-word.staff__item-word--main Требования к себе и компании определяют наш вектор развития!
+          p.staff__item-standing Основатель компании
+      li.staff__item
+        img.staff__item-photo(src='img/neizvmar.jpg', width='270', height='255', alt='Неизвестная Мария')
+        cite.staff__item-person Неизвестная Мария
+        blockquote.staff__item-blockquote
+          mark.staff__item-word Важно, чтобы наши клиенты понимали: их мнение играет важную роль!
+        p.staff__item-standing Работает в компании с&nbsp;2013&nbsp;года
+      li.staff__item
+        img.staff__item-photo(src='img/mamonsvet.jpg', width='270', height='255', alt='Мамонтова Светлана')
+        cite.staff__item-person Мамонтова Светлана
+        blockquote.staff__item-blockquote
+          mark.staff__item-word Самое главное - подходить к работе с полной самоотдачей!
+        p.staff__item-standing Работает в компании с&nbsp;2007&nbsp;года
+      li.staff__item
+        img.staff__item-photo(src='img/fayznad.jpg', width='270', height='255', alt='Файрузова Надежда')
+        cite.staff__item-person Файрузова Надежда
+        blockquote.staff__item-blockquote
+          mark.staff__item-word Главное для меня - отвественность перед нашими клиентами!
+        p.staff__item-standing Работает в компании с&nbsp;2015&nbsp;года
+
+block footer
+  +footer(pagesList, 4)

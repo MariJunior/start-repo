@@ -1,0 +1,84 @@
+extends ../pug/layout.pug
+
+block meta
+  title НордВест - Главная
+  meta(name='description', content='')
+
+block header
+  +header(pagesList, 1)
+
+block content
+  h1.visually-hidden Основные сведения о компании
+  section.intro-block
+    .intro-block__wrap
+      p.intro-block__text.intro-block__text--first «Мы на рынке уже более 7 лет
+      p.intro-block__text.intro-block__text--second своим клиентам гарантируем результат!»
+
+  +section-list(clientsData)
+
+  +section-list(servicesData)
+
+  section.certificates.gallery
+    - var certificatesNumber = 10;
+      h2.certificates__title.section-title Наши сертификаты
+      .certificates__list
+        - for (var i = 1; i <= certificatesNumber; ++ i) {
+          a.certificates__item(href='img/cert-'+i+'.jpg', data-fancybox='certificates', data-caption='Здесь может быть любая подпись к изображению')
+            img(src='img/cert-'+i+'.jpg', width='180', height='260', alt='Сертификат')
+        - }
+
+  section.reviews
+    h2.reviews__title.section-title Отзывы
+    ul.reviews__list
+      li.reviews__item
+        .reviews__item-reviwer
+          img.reviews__item-photo(src='img/vasyapetr.jpg', alt='Фото Васи Петрова')
+          .reviews__item-reviwer-info
+            cite.reviews__item-name Вася Петров
+            p.reviews__item-function директор
+            p.reviews__item-company ООО “Где деньги, Зин?”
+        blockquote.reviews__item-text
+          | Повседневная практика показывает, что консультация с широким активом способствует подготовки и реализации соответствующий условий активизации.
+          | Таким образом реализация намеченных плановых заданий играет важную роль в формировании направлений прогрессивного развития.
+          | Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений.
+          | Не следует, однако забывать, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+      li.reviews__item
+        .reviews__item-reviwer
+          img.reviews__item-photo(src='img/zinasobstv.jpg', alt='Фото Зины Собственно')
+          .reviews__item-reviwer-info
+            cite.reviews__item-name Зина Собственно
+            p.reviews__item-function директор
+            p.reviews__item-company ООО “Не знаю, Вася”
+        blockquote.reviews__item-text
+          | С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.
+          | Таким образом консультация с широким активом позволяет выполнять важные задания по разработке соответствующий условий активизации.
+          | Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач.
+          | Не следует, однако забывать, что консультация с широким активом играет важную роль в формировании соответствующий условий активизации.
+      li.reviews__item
+        .reviews__item-reviwer
+          img.reviews__item-photo(src='img/vassazhel.jpg', alt='Фото Вассы Железновы')
+          .reviews__item-reviwer-info
+            cite.reviews__item-name Васса Железнововнеева
+            p.reviews__item-function директор
+            p.reviews__item-company ЦКиЗ “Никто не заметит”
+        blockquote.reviews__item-text
+          | Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке новых предложений.
+          | С другой стороны начало повседневной работы по формированию позиции позволяет оценить значение новых предложений.
+          | Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения систем массового участия.
+          | Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+          | Задача организации, в особенности же сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+          | Таким образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации форм развития.
+
+  section.map
+    h2.map__title.section-title Наше местоположение
+
+    .map__container
+      .map__block#map
+
+block footer
+  +footer(pagesList, 1)
+
+
+block page-bottom
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+  script(src='js/script.min.js')

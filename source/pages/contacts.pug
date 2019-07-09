@@ -1,0 +1,53 @@
+extends ../pug/layout.pug
+
+block meta
+  title НордВест - Контакты
+  meta(name='description', content='')
+
+block header
+  +header(pagesList, 5)
+
+block content
+  .page-container
+    h1.visually-hidden Наши контакты
+
+    section.contacts
+      h2.contacts__title.section-title Контакты
+      .contacnts__wrap
+        .contacts__part
+          p
+            b Адрес:
+            br
+            | 454004, Челябинск, ул. Академика Сахарова 34.
+            i тут может быть подробное описание того, как найти организацию
+          .contacts__map#map
+
+        .contacts__part
+          p
+            b Время работы:
+            br
+            | найти нас в офисе можно
+            b с понедельника по пятницу с 11:00 до 18:00
+          p
+            | Если любите писать с личной почты:
+            a(href='mailto:mail@nordwest74.ru') mail@nordwest74.ru
+          p
+            b Телефон:
+            a(href='tel:+73512304216') +7 (351) 230-42-16
+            |  - наш основной телефон;
+            br
+            a(href='tel:+79088209260') +7 (908) 820-92-60
+            |  - запасной телефон.
+
+    section.feedback
+      h2.feedback__title.section-title Форма обратной связи
+      form.feedback__form(action='#', method='get')
+        .feedback__form-wrap
+          input#name(type='text', name='name', placeholder='Ваши ФИО')
+          input#telephone(type='tel', name='telephone', placeholder='Номер телефона')
+          input#email(type='email', name='email', placeholder='Ваш e-mail')
+          textarea#comments(name='comments', placeholder='Комментарии')
+        button(type='submit') Отправить
+
+block footer
+  +footer(pagesList, 5)

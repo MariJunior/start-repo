@@ -1,0 +1,16 @@
+/*
+  This mixin can be used to set the object-fit:
+  .object-fit(contain);
+  or object-fit and object-position:
+  .object-fit(cover, top);
+*/
+.object-fit-full(@fit: fill, @position) {
+  object-fit: @fit;
+  object-position: @position;
+  font-family: "object-fit: @{fit}; object-position: @{position}";
+}
+
+.object-fit(@fit: fill) {
+  object-fit: @fit;
+  font-family: "object-fit: @{fit}";
+}

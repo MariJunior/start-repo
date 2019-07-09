@@ -1,0 +1,6 @@
+mixin section-list(data)
+  section(class=data.name)
+      h2(class=data.name + '__title' + ' section-title')= data.title
+      ul(class=data.name + '__list')
+        each item in data.items
+          li(class=data.name + '__list-item')= item

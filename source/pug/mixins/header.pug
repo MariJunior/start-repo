@@ -1,0 +1,8 @@
+mixin header(data, current)
+  header.page-header
+    img.page-header__logo(src='img/logo.svg', width='70', height='33', alt='Логотип ООО Нордвест')
+    nav.page-header__navigation
+      ul.page-header__navigation-list.navigation-list
+        each item, index in data
+          li.navigation-list__item(class=(index === current-1 ? 'navigation-list__item--current' : undefined))
+            a.navigation-list__link(href=(index === current-1 ? undefined : item.href))= item.title

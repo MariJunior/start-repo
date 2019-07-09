@@ -1,0 +1,33 @@
+// @font-face mixin.
+.font-face-extended(@family, @filename: @family, @weight: 400, @style: normal, @display: swap) {
+  @font-face {
+    font-family: "@{family}";
+    src: url("../fonts/@{filename}.eot");
+    src:
+      local("@{filename}"),
+      local("@{family}"),
+      url("../fonts/@{filename}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/@{filename}.woff2") format("woff2"),
+      url("../fonts/@{filename}.woff") format("woff"),
+      url("../fonts/@{filename}.ttf") format("truetype");
+    font-weight: @weight;
+    font-style: @style;
+
+    font-display: @display;
+  }
+}
+
+.font-face(@family, @filename: @family, @weight: 400, @style: normal, @display: swap) {
+  @font-face {
+    font-family: @family;
+    src:
+      local("@{filename}"),
+      local("@{family}"),
+      url("../fonts/@{filename}.woff2") format("woff2"),
+      url("../fonts/@{filename}.woff") format("woff");
+    font-weight: @weight;
+    font-style: @style;
+
+    font-display: @display;
+  }
+}

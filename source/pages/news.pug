@@ -1,0 +1,52 @@
+extends ../pug/layout.pug
+
+block meta
+  title НордВест - Новости
+  meta(name='description', content='')
+
+block header
+  +header(pagesList, 3)
+
+block content
+  section.news
+    h1.news__title.section-title Новости
+
+    .news__wrap
+      article.news__card.news-card
+        header.news-card__header
+          h2.news-card__title Заголовок поста
+          time.news-card__date(datetime='2016-07-06T11:00:00') 06.07.2016
+        .news-card__content
+          p.news-card__text
+            | Равным образом постоянный количественный рост и сфера нашей активности позволяет
+            | выполнять важные задания по разработке направлений прогрессивного развития.
+            | Равным образом укрепление и развитие структуры представляет собой интересный эксперимент
+            | проверки направлений прогрессивного развития.
+          a.news-card__btn(href='#') Подробнее
+
+      article.news__card.news-card
+        header.news-card__header
+          h2.news-card__title Заголовок поста
+          time.news-card__date(datetime='2016-11-25T17:43:00') 25.11.2016
+        .news-card__content
+          p.news-card__text
+            | Равным образом постоянный количественный рост и сфера нашей активности позволяет
+            | выполнять важные задания по разработке направлений прогрессивного развития.
+            | Равным образом укрепление и развитие структуры представляет собой интересный эксперимент
+            | проверки направлений прогрессивного развития.
+          a.news-card__btn(href='#') Подробнее
+
+      article.news__card.news-card
+        header.news-card__header
+          h2.news-card__title Заголовок поста
+          time.news-card__date(datetime='2017-03-08T15:59:17') 08.03.2017
+        .news-card__content
+          p.news-card__text
+            | Равным образом постоянный количественный рост и сфера нашей активности позволяет
+            | выполнять важные задания по разработке направлений прогрессивного развития.
+            | Равным образом укрепление и развитие структуры представляет собой интересный эксперимент
+            | проверки направлений прогрессивного развития.
+          a.news-card__btn(href='#') Подробнее
+
+block footer
+  +footer(pagesList, 3)
