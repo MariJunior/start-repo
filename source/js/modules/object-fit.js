@@ -1,9 +1,9 @@
 /* global document*/
-'use strict';
+// 'use strict';
 
-const $ = require('jquery');
-const objectFitImages = require('object-fit-images');
+// const $ = require('jquery');
+// const objectFitImages = require('object-fit-images');
 
-$(document).ready(function () {
-  objectFitImages();
-});
+// $(document).ready(function () {
+//   objectFitImages();
+// });
