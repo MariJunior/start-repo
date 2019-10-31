@@ -1,3 +1,2 @@
-src/scss/normalize.scss
-src/scss/global.scss
-src/scss/scaffolding.scss
+source/less/normalize.less
+source/less/global.less
